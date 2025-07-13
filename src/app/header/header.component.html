@@ -1,0 +1,20 @@
+<header>
+  <div class="header-title">
+    <a
+      [routerLink]="userLoggedIn ? '/files' : '/login'"
+      class="app-title-link"
+    >
+      <h1>Filedump</h1>
+    </a>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+      <ng-container *ngIf="userLoggedIn">
+        <li><a class="nav-link" routerLink="/files" routerLinkActive="active">Files</a></li>
+        <li><a class="nav-link" [routerLink]="['files', 'upload']" routerLinkActive="active">Upload</a></li>
+        <li><button class="logout-btn" (click)="confirmLogout()">Log out</button></li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>

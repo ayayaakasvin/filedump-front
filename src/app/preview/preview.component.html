@@ -1,0 +1,19 @@
+<div class="preview-container">
+  <ng-container [ngSwitch]="fileType">
+    <ng-container *ngSwitchCase="'image'">
+      <img [src]="previewUrl" alt="File preview" class="preview-image" />
+    </ng-container>
+    <ng-container *ngSwitchCase="'pdf'">
+      <embed [src]="previewUrl" type="application/pdf" class="preview-pdf" />
+    </ng-container>
+    <ng-container *ngSwitchCase="'text'">
+      <pre class="preview-text">{{ fileContent }}</pre>
+    </ng-container>
+    <ng-container *ngSwitchCase="'unsupported'">
+      <p class="error-message">{{ errorMessage || 'No file selected' }}</p>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      <p class="info-message">No file selected</p>
+    </ng-container>
+  </ng-container>
+</div>

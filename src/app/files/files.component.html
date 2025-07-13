@@ -1,0 +1,9 @@
+<section class="files-container">
+  <h1 class="files-title">Your Files</h1>
+  <ng-container *ngIf="files?.length; else noFiles">
+    <app-file-window *ngFor="let file of files" [file]="file" (deleteEmit)="onDelete($event)"></app-file-window>
+  </ng-container>
+  <ng-template #noFiles>
+    <div class="no-files-msg">No files found.</div>
+  </ng-template>
+</section>

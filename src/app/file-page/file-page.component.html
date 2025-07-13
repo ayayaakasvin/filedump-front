@@ -1,0 +1,25 @@
+<div class="file-page-container" *ngIf="file else noFile">
+  <div class="file-header">
+    <span class="file-title">{{ file.file_name }}</span>
+    <span *ngIf="file.file_ext" class="file-ext">.{{ file.file_ext }}</span>
+  </div>
+  <div class="file-uuid-row">
+    <span class="file-uuid-label"><strong>uuid:</strong></span>
+    <span class="file-uuid-value">{{ file.file_uuid }}</span>
+    <button class="copy-btn" (click)="copyUUID()" type="button" title="Copy UUID">Copy</button>
+  </div>
+  <ul class="file-details-list">
+    <li><strong>time:</strong> {{ file.uploaded_at | date:'mediumDate' }}</li>
+    <li><strong>size:</strong> {{ file.size | number }} bytes (~{{ file.size | fileSize }})</li>
+    <li *ngIf="file.file_ext"><strong>ext:</strong> .{{ file.file_ext }}</li>
+    <li *ngIf="file.mime_type"><strong>mime:</strong> {{ file.mime_type }}</li>
+    <li><strong>user id:</strong> {{ file.user_id }}</li>
+  </ul>
+  <div class="file-actions-row">
+    <app-download-tool [file_id]="file.file_uuid" [original_filename]="file.file_name"></app-download-tool>
+    <app-delete-tool [file_id]="file_id" (deleteEmitter)="onDelete()"></app-delete-tool>
+  </div>
+</div>
+<ng-template #noFile>
+  <div class="no-file-msg">No such file :(</div>
+</ng-template>

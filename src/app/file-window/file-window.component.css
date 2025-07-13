@@ -1,0 +1,67 @@
+.file-window-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: none;
+  padding: 0.7rem 1.1rem;
+  margin: 0.15rem 0;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.file-window-row:hover {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.file-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.file-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.file-ext {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.file-details {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.87rem;
+  color: #6b7280;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-uuid {
+  font-size: 0.8rem;
+  color: #d1d5db;
+  letter-spacing: 0.01em;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}

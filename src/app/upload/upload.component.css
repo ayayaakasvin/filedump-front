@@ -1,0 +1,95 @@
+Upload page styles
+section {
+  margin: 0;
+  padding: 2.5rem 0 2rem 0;
+  border-radius: 1.2rem;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+app-upload-tool {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+}
+
+.upload-container {
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.upload-label {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.uploaded-file-info {
+  color: #374151;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+
+button,
+input[type="submit"] {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+  margin-top: 1.2rem;
+  outline: none;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+button:active,
+input[type="submit"]:active {
+  background: #1e40af;
+}

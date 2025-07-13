@@ -1,0 +1,103 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.header-title {
+  flex: 1 1 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  /* Add pointer for clickable title */
+}
+
+.app-title-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.18s;
+}
+
+.app-title-link:hover h1 {
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+.header-nav {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a,
+.header-nav button {
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center; /* Add this line */
+  height: 100%;        /* Add this line */
+  box-sizing: border-box; /* Add this line */
+}
+
+.nav-link, .logout-btn {
+  background: #fff;
+  border-radius: 0.75rem;
+  /* Remove box-shadow and border by default */
+  box-shadow: none;
+  border: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.1rem;
+  font-weight: 500;
+  color: #1f2937;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: #f3f4f6;
+  color: #1e40af;
+  /* Add shadow only on hover/active */
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.08);
+  text-decoration: none;
+}
+
+.logout-btn {
+  color: #ef4444;
+  background: #fff;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  /* Add shadow only on hover */
+  box-shadow: 0 4px 16px rgba(239,68,68,0.12);
+}

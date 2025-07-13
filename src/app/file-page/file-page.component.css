@@ -1,0 +1,91 @@
+.file-page-container {
+  max-width: 520px;
+  margin: 2.5rem auto 0 auto;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: inherit;
+}
+
+.file-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.file-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.01em;
+}
+
+.file-ext {
+  font-size: 1.1rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.file-uuid-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.file-uuid-label {
+  font-size: 0.92rem;
+  color: #9ca3af;
+}
+
+.file-uuid-value {
+  font-size: 0.92rem;
+  color: #d1d5db;
+  font-family: monospace;
+  letter-spacing: 0.01em;
+  user-select: all;
+}
+
+.copy-btn {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 0.5rem;
+  color: #374151;
+  font-size: 0.92rem;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-left: 0.2rem;
+}
+.copy-btn:hover {
+  background: #e0e7ef;
+}
+
+.file-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+.file-actions-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.no-file-msg {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}

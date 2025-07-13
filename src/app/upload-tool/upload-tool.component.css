@@ -1,0 +1,52 @@
+.file-input {
+  display: none;
+}
+
+.upload-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+  outline: none;
+  transition: background 0.18s;
+}
+
+.upload-btn.red {
+  background: #ef4444;
+  color: #fff;
+}
+
+.upload-btn:hover {
+  background: #1d4ed8;
+}
+
+.upload-btn.red:hover {
+  background: #dc2626;
+}
+
+.upload-btn:active {
+  background: #1e40af;
+}
+
+.upload-btn.red:active {
+  background: #b91c1c;
+}
+
+.upload-btn.red:disabled {
+  background: #f87171;
+  cursor: not-allowed;
+}
+
+p, ul, li, strong {
+  color: inherit;
+}
+
+#big {
+  color: #ef4444;
+  font-weight: 500;
+}

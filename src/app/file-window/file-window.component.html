@@ -1,0 +1,17 @@
+<section class="file-window-row" *ngIf="file" [routerLink]="['/files', file.file_uuid]">
+  <div class="file-info">
+    <div class="file-name-row">
+      <span class="file-name">{{ file.file_name }}</span>
+      <span *ngIf="file.file_ext" class="file-ext">.{{ file.file_ext }}</span>
+    </div>
+    <ul class="file-details">
+      <li>{{ file.uploaded_at | date:'mediumDate' }}</li>
+      <li>{{ file.size | number }} bytes</li>
+      <li class="file-uuid">{{ file.file_uuid }}</li>
+    </ul>
+  </div>
+  <div class="file-actions">
+    <app-download-tool [file_id]="file.file_uuid" [original_filename]="file.file_name"></app-download-tool>
+    <app-delete-tool [file_id]="file.file_uuid" (deleteEmitter)="onDeleteEmit($event)"></app-delete-tool>
+  </div>
+</section>

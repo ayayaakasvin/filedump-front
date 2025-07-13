@@ -1,0 +1,42 @@
+<div>
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+    <div>
+        <p><strong>File requierments:</strong></p>
+            <ul>
+                <li>File size should be less than <strong>{{ maxFileSize | number }} bytes~{{maxFileSize | fileSize }}</strong></li>
+            </ul>
+    </div>
+
+    <div>
+        <ng-container *ngIf="metaData; else noFile">
+            <p><strong>Filename:</strong> {{ metaData.file_name }}</p>
+            <p><strong>Size:</strong> {{ metaData.size | fileSize }}</p>
+            <p *ngIf="metaData.mime_type"><strong>MIME:</strong> {{ metaData.mime_type }}</p>
+            <p><strong>Uploaded At:</strong> {{ metaData.uploaded_at| date: "long" }}</p>
+        </ng-container>
+
+        <ng-template #noFile>
+            <p>No file uploaded yet.</p>
+        </ng-template>
+
+        <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">Choose file
+        </button>
+
+        <br>
+
+        <button mat-mini-fab color="primary" class="upload-btn" (click)="onFileReset(fileUpload)">Reset
+        </button>
+
+        <br>
+
+        <ng-container *ngIf="metaData">
+            <button class="upload-btn" (click)="onFileSend(fileUpload)" [disabled]="!isFileSizeValid()">Send
+            </button>
+        </ng-container>
+
+        <ng-container *ngIf="!isFileSizeValid()" >
+            <p id="big"><strong>File size is too big</strong></p>
+        </ng-container>
+    </div>
+</div>
